@@ -4,7 +4,6 @@ import {
   faEnvelope, 
   faPhone, 
   faMapMarkerAlt, 
-  faClock,
   faPaperPlane,
   faSpinner
 } from '@fortawesome/free-solid-svg-icons';

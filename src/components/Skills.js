@@ -1,34 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faPalette, faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 import './Skills.css';
 
 const Skills = () => {
-  const [animatedSkills, setAnimatedSkills] = useState({});
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const skillName = entry.target.dataset.skill;
-            setAnimatedSkills(prev => ({
-              ...prev,
-              [skillName]: true
-            }));
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    document.querySelectorAll('.skill-item').forEach((item) => {
-      observer.observe(item);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   const skillCategories = [
     {
       id: 'programming',
@@ -97,13 +72,6 @@ const Skills = () => {
         { name: 'Goal Setting' }
       ]
     }
-  ];
-
-  const stats = [
-    { number: '8.86', label: 'CGPA' },
-    { number: '3+', label: 'Projects Completed' },
-    { number: '20%', label: 'Traffic Increase (SEO)' },
-    { number: '2nd', label: 'Web Dev Contest Position' }
   ];
 
   return (
