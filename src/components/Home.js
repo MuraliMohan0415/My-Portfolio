@@ -84,11 +84,12 @@ const Home = () => {
 
           <div className="home-image">
             <div className="profile-image-container">
-              <img 
-                src="/images/profile-photo.jpg" 
-                alt="Murali Mohan Darapureddy" 
-                className="profile-image"
-              />
+<img 
+  src="https://raw.githubusercontent.com/MuraliMohan0415/My-Portfolio/main/My%20T-Hub%20image.jpg" 
+  alt="Murali Mohan Darapureddy" 
+  className="profile-image"
+/>
+
             </div>
           </div>
         </div>
